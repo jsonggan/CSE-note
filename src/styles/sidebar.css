@@ -1,0 +1,7 @@
+.sidebar-open {
+  margin-left: 20rem; /* Adjust the width of the sidebar */
+}
+
+.page-container {
+  transition: margin 0.3s ease-in-out;
+}
