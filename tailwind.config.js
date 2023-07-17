@@ -10,12 +10,18 @@ module.exports = withMT({
       'blue': '#1fb6ff',
       'purple': '#7e5bef',
       'pink': '#ff49db',
-      'orange': '#ff7849',
+      'orange': '#C95B0C',
       'green': '#13ce66',
       'yellow': '#ffc82c',
       'gray-dark': '#273444',
       'gray': '#8492a6',
       'gray-light': '#d3dce6',
+    },
+    fontWeight: {
+      light: 300,
+      normal: 400,
+      medium: 500,
+      bold: 700,
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
@@ -31,7 +37,9 @@ module.exports = withMT({
         'padding-component-small': '1rem',
       },
       fontFamily: {
-        body: ['Roboto']
+        body: ['Roboto'],
+        helvaticaneue: ["Helvetica Neue"],
+        sfpro: ["SF Pro"],
       },
       borderRadius: {
         '4xl': '2rem',
