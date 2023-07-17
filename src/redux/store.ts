@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import pagePaddingReducer from './page-padding';
 import sidebarReducer from './sidebar';
+import noteContentReducer from './note-content';
 
 export const store = configureStore({
   reducer: {
     pagePadding: pagePaddingReducer,
     sidebar: sidebarReducer,
+    noteContent: noteContentReducer,
   },
 })
 

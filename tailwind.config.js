@@ -26,6 +26,7 @@ module.exports = withMT({
         'window-padding-small': '10rem',
         'window-padding-large': '20rem',
         'padding-heading1': '4.5rem',
+        'padding-heading2': '2rem',
         'padding-component-medium': '1.5rem',
         'padding-component-small': '1rem',
       },

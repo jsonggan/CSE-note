@@ -2,7 +2,7 @@
   "pagePadding":{
     "minPadding": 3,
     "vwWhenMinPadding": 900,
-    "parameter": 6.2
+    "parameter": 5
   },
   "size":{
     "sidebar": "20"

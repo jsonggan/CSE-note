@@ -4,13 +4,15 @@ import todoList from '../data/mock-data/todolist.json';
 import Sidebar from '../components/sidebar';
 import '../styles/sidebar.css';
 import { usePagePadding } from './function/pagePadding';
+import CustomNavbar from '../components/navbar';
+import NoteContent from '../components/note_content';
 
 // redux
 import type { RootState } from '../redux/store';
 import { useSelector, useDispatch } from 'react-redux';
 import { onSidebarChange } from '../redux/sidebar';
 
-function Todo() {
+function Note() {
   // redux
   const pagePadding = useSelector((state: RootState) => state.pagePadding.value)
   const sidebar = useSelector((state: RootState) => state.sidebar.value)
@@ -28,20 +30,17 @@ function Todo() {
   };
 
   return (
-    <div className={`page-container ${sidebar ? 'ml-80' : ''}`}>
-      <button onClick={toggleSidebar}>Toggle</button>
-      {sidebar && <Sidebar />}
-      <div className='pt-padding-heading1' style={pageContentStyle}>
-        <h1 className="text-3xl font-bold">
-          Task
-        </h1>
-        <div className='pt-padding-component-medium'></div>
-        {todoList['todolist'].map((title, index) => (
-          <TodoListComponent key={index} title={title} index={index}/>
-        ))}
+    <div>
+      <CustomNavbar />
+      <div className={`page-container ${sidebar ? 'ml-80' : ''}`}>
+        
+        {sidebar && <Sidebar />}
+        <div className='' style={pageContentStyle}>
+          <NoteContent />
+        </div>
       </div>
     </div>
   );
 }
 
-export default Todo;
+export default Note;
