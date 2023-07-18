@@ -7,7 +7,8 @@ import { useSelector } from 'react-redux';
 function NoteContent() {
   const noteContent = useSelector((state: RootState) => state.noteContent);
 
-  const preprocessContent = (content: string) => {
+  // bold content
+  const boldContent = (content: string) => {
     const parts = content.split('**');
     return parts.map((part, index) => {
       if (index % 2 === 1) {
@@ -16,9 +17,34 @@ function NoteContent() {
         return part;
       }
     });
-  };
+  }
 
-  // style={{ fontWeight: 'light' }}
+  // input image
+  const imageContent = (content: string) => {
+    const parts = content.split(/\[\[(.*?)\]\]/);
+    return parts.map((part, index) => {
+      if (index % 2 === 1) {
+        return <img key= {part} src={part} alt="image fail to read"/>;
+      } else {
+        return part;
+      }
+    });
+  }
+
+  const preprocessContent = (content: string) => {
+    const boldParts = boldContent(content); // Apply bold formatting
+    const processedParts = boldParts.flatMap((part) => {
+      if (typeof part === 'string') {
+        // If part is a string, check for image content
+        const imageParts = imageContent(part);
+        return imageParts;
+      } else {
+        // If part is already a React element, return it as is
+        return part;
+      }
+    });
+    return processedParts;
+  };
 
   return (
     <div className='pb-padding-heading1'>
@@ -31,9 +57,9 @@ function NoteContent() {
             className={`text-4xl font-helvaticaneue text-primary ${ index === 0 ? '' : 'pt-padding-heading2' }`} style={{ fontWeight: 'medium' }}>
             {heading}
           </h2>
-          <p style={{ whiteSpace: 'pre-wrap', fontWeight: 'normal'} } className='font-normal text-[17px] pt-padding-component-small font-sfpro'>
+          <div style={{ whiteSpace: 'pre-wrap', fontWeight: 'normal'} } className=' text-[17px] pt-padding-component-small font-sfpro'>
             {preprocessContent(noteContent.content[heading])}
-          </p>
+          </div>
         </div>
       ))}
     </div>
