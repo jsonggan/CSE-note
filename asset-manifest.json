@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/CSE_note/static/css/main.133144da.css",
+    "main.js": "/CSE_note/static/js/main.4bda540d.js",
+    "static/js/787.6786d5c0.chunk.js": "/CSE_note/static/js/787.6786d5c0.chunk.js",
+    "static/media/SFPRODISPLAYREGULAR.OTF": "/CSE_note/static/media/SFPRODISPLAYREGULAR.d1f5e6e16dd4f75c3950.OTF",
+    "static/media/Helvetica Neue Condensed Bold.ttf": "/CSE_note/static/media/Helvetica Neue Condensed Bold.a5c4ff49d50d0b5f3f8a.ttf",
+    "static/media/HelveticaNeue Medium.ttf": "/CSE_note/static/media/HelveticaNeue Medium.64ab5024acf8e1619abc.ttf",
+    "static/media/Helvetica Neue 67 Medium Condensed.otf": "/CSE_note/static/media/Helvetica Neue 67 Medium Condensed.83d0efb33c1a0c296f4f.otf",
+    "index.html": "/CSE_note/index.html",
+    "static/media/sidebar.svg": "/CSE_note/static/media/sidebar.b4638df8a58d405979521f33f923c4a9.svg",
+    "main.133144da.css.map": "/CSE_note/static/css/main.133144da.css.map",
+    "main.4bda540d.js.map": "/CSE_note/static/js/main.4bda540d.js.map",
+    "787.6786d5c0.chunk.js.map": "/CSE_note/static/js/787.6786d5c0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.133144da.css",
+    "static/js/main.4bda540d.js"
+  ]
+}
