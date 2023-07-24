@@ -13,9 +13,24 @@ import { ThemeProvider } from "@material-tailwind/react";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
+const theme = {
+  navbar: {
+    styles: {
+      base: {
+        navbar: {
+          blurred: {
+            borderWidth: "",
+          },
+        },
+      },
+    },
+  },
+};
+
 root.render(
   <React.StrictMode>
-    <ThemeProvider>
+    <ThemeProvider value={theme}>
       <Provider store={store}>
         <App />
       </Provider>
