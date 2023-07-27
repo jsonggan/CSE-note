@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 export interface noteContentState {
   heading1: string;
@@ -10,10 +10,10 @@ const initialState: noteContentState = {
   heading1: "",
   heading2: [],
   content: {},
-}
+};
 
 export const noteContentSlice = createSlice({
-  name: 'pagePadding',
+  name: "noteContent",
   initialState,
   reducers: {
     onContentChange: (state, action) => {
@@ -22,9 +22,9 @@ export const noteContentSlice = createSlice({
       state.content = action.payload.content;
     },
   },
-})
+});
 
 // Action creators are generated for each case reducer function
-export const { onContentChange } = noteContentSlice.actions
+export const { onContentChange } = noteContentSlice.actions;
 
-export default noteContentSlice.reducer
+export default noteContentSlice.reducer;

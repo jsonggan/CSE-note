@@ -1,0 +1,8 @@
+{
+  "heading1": ["Internet Naming and Addressing"],
+  "heading2": ["Domain Name System", "DNS Structure"],
+  "content": {
+    "Domain Name System": "DNS map between IP address and name\n\n**Characteristic of DNS**\n1. **Distributed Database**: prevent single point of failure, avoid bottleneck traffic volume, avoid long delay of lookup, support update of the mapping (create/update/delete), a centralize DNS doesn't not scale\n2. **Application Layer Protocol**",
+    "DNS Structure": "DNS is a distributed and hierarchical database.\n1. **Root**: "
+  }
+}
